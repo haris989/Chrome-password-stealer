@@ -21,6 +21,8 @@ for result in cursor.fetchall():
         fp.write('\nThe website is '+result[0])
         fp.write('\nThe Username is '+result[1])
         fp.write('\n The password is ' + str(password))
+        
+fp.close()
 
 
 
